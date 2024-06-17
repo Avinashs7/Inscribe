@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <body>
+        <%- include('./partials/navbar') %>
+        <div class="signup">
+          <div class="onboard-user"></div>
+          <div class="container mt-5">
+            <h1 class="container ">
+              <pre>Welcome To Inscribe!!
+SignUp
+              </pre>
+            </h1>
+            <form method="post" action="/user/signup">
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full name</label>
+                <input type="text" class="form-control" name="fullName" id="fullname">
+                <div class="underline"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1">
+                <div class="underline"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                <div class="underline"></div>
+              </div>
+              <button type="submit" class="btn btn custom-btn">Submit</button>
+            </form>
+            <a href="/auth/login">
+              <button type="button" class="google-sign-in-button" >
+                Sign up with Google
+              </button>
+            </a>
+          </div>
+        </div>
+          
+        <%- include('./partials/script') %>
+</body>
+</html>

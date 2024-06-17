@@ -1,0 +1,30 @@
+.custom-brand{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.custom-logo{
+    width:5%;
+    height: 5%;
+}
+
+.nav-link {
+    position: relative;
+  }
+  
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .nav-link:hover::before {
+    background-color: #000; 
+  }

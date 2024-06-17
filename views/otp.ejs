@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <body>
+        <%- include('./partials/navbar') %>
+        <div>
+            <form method="POST" action="/user/verify">
+                <label for="otp">Otp:</label>
+                <input type="text" id="otp" name="otp"/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <%- include('./partials/script') %>
+</body>
+</html>
