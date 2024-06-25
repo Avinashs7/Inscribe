@@ -13,13 +13,13 @@ const handleOtp=(req,res)=>{
 const addUser=async(req,res)=>{
     //Accepts the user data and stores it. Password is hashed inside models itself.
     const {fullName,email,password,profile}=req.body;
-    const otp=otpgenerator();
-    const mailOptions={
-        from: process.env.EMAIL,
-        to: email,
-        subject: 'Email Verification OTP',
-        text: `Your OTP for email verification is ${otp}. It will expire in 5 minutes.`
-    }
+        const otp=otpgenerator();
+        const mailOptions={
+            from: process.env.EMAIL,
+            to: email,
+            subject: 'Email Verification OTP',
+            text: `Your OTP for email verification is ${otp}. It will expire in 5 minutes.`
+        }
     const user=await User.create({
         fullName,email,password,profile,otp    
     });

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/navbar') %>
+    <div class="mb-3">
+        <h1><%= blogs.title %></h1>
+        <img class="" alt="..." src='<%=blogs.coverImageUrl%>'>
+        <p><%= blogs.body %></p>
+    </div>
+    <%- include('./partials/script') %>
+</body>
+</html>

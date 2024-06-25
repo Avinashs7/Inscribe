@@ -9,6 +9,7 @@ const { checkForAuthentication } = require('./middlewares/authentication')
 
 const userRoute=require("./routes/user")
 const oAuthRoute=require('./routes/googleAuth')
+const blogRoute=require('./routes/blog')
 
 const PORT=process.env.PORT || 8000
 
@@ -22,8 +23,10 @@ app.use(checkForAuthentication("token"))
 app.use(express.static(path.join(__dirname,'static')))
 app.use(express.static(path.join(__dirname,'public')))
 
+
 app.use('/user',userRoute)
 app.use('/auth',oAuthRoute)
+app.use('/blog',blogRoute)
 
 mongoose.connect("mongodb://127.0.0.1:27017/blogify").then(()=>{
     console.log("Database connected")
